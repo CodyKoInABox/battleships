@@ -45,6 +45,12 @@ body{
 .opponentUtilsContainer{
     width: 40vw;
     height: 100%;
+    text-align: center;
+}
+.attackButton{
+    width: 16vw;
+    height: 4vw;
+    margin-top: 6vw;
 }
 .playerShipsContainer{
     width: 40vw;
