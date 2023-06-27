@@ -63,5 +63,7 @@ body{
 .playerShipContainer{
     margin-top: 6vw;
     width: 3vw;
-    height: 9vw;
+    height: 15vw;
+    display: grid;
+    grid-template-rows: 3vw 3vw 3vw 3vw 3vw;
 }
