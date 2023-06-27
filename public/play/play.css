@@ -70,25 +70,35 @@ body{
 #carrier{
     grid-row-start: 1;
     grid-row-end: 6;
-    background-color: red;
+    background-image: url("../../assets/carrier.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 #battleship{
     grid-row-start: 1;
     grid-row-end: 5;
-    background-color: red;
+    background-image: url("../../assets/battleship.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 #destroyer{
     grid-row-start: 1;
     grid-row-end: 4;
-    background-color: red;
+    background-image: url("../../assets/destroyer.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 #submarine{
     grid-row-start: 1;
     grid-row-end: 4;
-    background-color: red;
+    background-image: url("../../assets/submarine.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 #patrol{
     grid-row-start: 1;
     grid-row-end: 3;
-    background-color: red;
+    background-image: url("../../assets/patrol.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
