@@ -22,7 +22,7 @@ body{
 .gameBoard{
     margin-left: auto;
     margin-right: auto;
-    margin-top: 9vw;
+    margin-top: 6vw;
     width: 30vw;
     height: 30vw;
     display: grid;
