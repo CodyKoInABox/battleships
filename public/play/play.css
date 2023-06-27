@@ -66,6 +66,12 @@ body{
     height: 15vw;
     display: grid;
     grid-template-rows: 3vw 3vw 3vw 3vw 3vw;
+    transition: .1s;
+}
+.playerShipContainer:hover{
+    cursor: pointer;
+    filter: brightness(70%);
+    transition: .1s;
 }
 #carrier{
     grid-row-start: 1;
