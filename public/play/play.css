@@ -38,3 +38,24 @@ body{
     filter: brightness(85%);
     cursor: pointer;
 }
+.playerUtilsContainer{
+    width: 40vw;
+    height: 100%;
+}
+.opponentUtilsContainer{
+    width: 40vw;
+    height: 100%;
+}
+.playerShipsContainer{
+    width: 40vw;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2vw;
+}
+.playerShip{
+    margin-top: 6vw;
+    width: 3vw;
+    height: 9vw;
+}
