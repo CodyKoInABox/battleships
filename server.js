@@ -12,5 +12,31 @@ const PORT = process.env.PORT || 8080
 app.use(express.static('./public'))
 
 
+io.on('connection', (socket) => {
+
+    socket.on('joinRoom', (roomName) =>{
+        socket.join(roomName)
+
+        try{
+            socket.to(roomName).emit('userCount' ,{'content': 'Someone joined', 'userCount': io.sockets.adapter.rooms.get(roomName).size})
+        }catch(e){
+            socket.broadcast.to(roomName).emit('message', {'message' : 'Error while calculating the user count', 'error' : e})
+        }
+
+        socket.on('disconnect', () => {
+            //io.to(roomName).emit('message', 'Disconnection detected!')
+            try{
+                socket.broadcast.to(roomName).emit('userCount' ,{'content': 'Someone disconnect', 'userCount': io.sockets.adapter.rooms.get(roomName).size})
+            }catch(e){
+                socket.broadcast.to(roomName).emit('message', {'message' : 'Error while calculating the user count', 'error' : e})
+            }finally{
+            }
+        })
+    })
+
+    socket.emit('message', 'Hello!')
+})
+
+
 
 server.listen(PORT, () => console.log(`Live on port ${PORT}`))
