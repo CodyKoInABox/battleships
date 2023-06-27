@@ -67,3 +67,28 @@ body{
     display: grid;
     grid-template-rows: 3vw 3vw 3vw 3vw 3vw;
 }
+#carrier{
+    grid-row-start: 1;
+    grid-row-end: 6;
+    background-color: red;
+}
+#battleship{
+    grid-row-start: 1;
+    grid-row-end: 5;
+    background-color: red;
+}
+#destroyer{
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background-color: red;
+}
+#submarine{
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background-color: red;
+}
+#patrol{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: red;
+}
