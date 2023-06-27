@@ -34,3 +34,7 @@ body{
     width: 3vw;
     height: 3vw;
 }
+.mapTile:hover{
+    filter: brightness(85%);
+    cursor: pointer;
+}
