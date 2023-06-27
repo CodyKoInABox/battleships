@@ -1,0 +1,26 @@
+body{
+    margin: 0px;
+    border: 0px;
+}
+.content{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+.contentColumn{
+    height: 100vh;
+}
+.contentColumnGame{
+    width: 40vw;
+}
+.contentColumnChat{
+    width: 20vw;
+}
+.gameBoardContainer{
+    width: 40vw;
+}
+.gameBoard{
+    width: 30vw;
+    height: 30vw;
+    display: grid 3vw 3vw 3vw 3vw 3vw 3vw 3vw 3vw 3vw 3vw;
+}
