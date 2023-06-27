@@ -29,3 +29,8 @@ body{
     grid-template-columns: 3vw 3vw 3vw 3vw 3vw 3vw 3vw 3vw 3vw 3vw;
     grid-template-rows: 3vw 3vw 3vw 3vw 3vw 3vw 3vw 3vw 3vw 3vw;
 }
+.mapTile{
+    background-color: aqua;
+    width: 3vw;
+    height: 3vw;
+}
