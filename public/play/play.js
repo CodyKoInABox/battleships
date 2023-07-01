@@ -1,6 +1,6 @@
 
 
-
+let isPlacementVertical = true
 
 let selectedShip = 'none'
 
@@ -22,18 +22,28 @@ function unselectShip(){
     selectShip = 'none'
 }
 
-
 //detects when user is hovering the left game board
 document.getElementById('leftGameBoard').addEventListener("mouseover", e => {
 
     // calls the getNeighbors function for the tile the user is hovering
     if(selectedShip != 'none'){
-
-        console.log(getNeighbors(e.target.id, shipSizes[selectedShip], true))
+        console.log(getNeighbors(e.target.id, shipSizes[selectedShip], isPlacementVertical))
     }
 
 })
 
+
+// this is toggle isPlacementVertical when the key "R" is pressed on the keyboard
+document.addEventListener('keypress', event => {
+    if (event.key == 'r' || event.key == 'R') {
+      
+        if(isPlacementVertical === true){
+            isPlacementVertical = false
+        }else{
+            isPlacementVertical = true
+        }
+    }
+  })
 
 
 
@@ -94,6 +104,21 @@ function getNeighbors(startCoord, amount, isVertical){
 
     }
     return neighbors
+}
+
+
+
+function checkIfAllNeighborsExist(neighbors){
+
+    for(let i = 0; i < neighbors.length; i++){
+        if( neighbors[i].length < 3 && neighbors[i][0] >= 0 && neighbors[i][1] >= 0){
+            // do nothing
+        }else{
+            return false
+        }
+    }
+
+    return true
 }
 
 
