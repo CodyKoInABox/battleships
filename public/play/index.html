@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Battleships | Play</title>
     <script defer src="/socket.io/socket.io.js"></script>
-    <script defer src="./play.js" type="module"></script>
+    <script defer src="./play.js"></script>
     <link rel="stylesheet" href="play.css">
 </head>
 <body>
     <div class="content">
         <div class="contentColumn contentColumnGame">
             <div class="gameBoardContainer">
-                <div class="gameBoard">
+                <div class="gameBoard" id="leftGameBoard">
                     <div class="mapTile" id="00"></div>
                     <div class="mapTile" id="01"></div>
                     <div class="mapTile" id="02"></div>
@@ -118,19 +118,19 @@
             <div class="playerUtilsContainer">
                 <div class="playerShipsContainer">
                     <div class="playerShipContainer">
-                        <div class="playerShip" id="carrier"></div>
+                        <div class="playerShip" id="carrier" onclick="selectShip('carrier')"></div>
                     </div>
                     <div class="playerShipContainer">
-                        <div class="playerShip" id="battleship"></div>
+                        <div class="playerShip" id="battleship" onclick="selectShip('battleship')"></div>
                     </div>
                     <div class="playerShipContainer">
-                        <div class="playerShip" id="destroyer"></div>
+                        <div class="playerShip" id="destroyer" onclick="selectShip('destroyer')"></div>
                     </div>
                     <div class="playerShipContainer">
-                        <div class="playerShip" id="submarine"></div>
+                        <div class="playerShip" id="submarine" onclick="selectShip('submarine')"></div>
                     </div>
                     <div class="playerShipContainer">
-                        <div class="playerShip" id="patrol"></div>
+                        <div class="playerShip" id="patrol" onclick="selectShip('patrol')"></div>
                     </div>
                 </div>
             </div>
