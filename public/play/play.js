@@ -27,7 +27,14 @@ document.getElementById('leftGameBoard').addEventListener("mouseover", e => {
 
     // calls the getNeighbors function for the tile the user is hovering
     if(selectedShip != 'none'){
-        console.log(getNeighbors(e.target.id, shipSizes[selectedShip], isPlacementVertical))
+
+        let currentNeighbors = getNeighbors(e.target.id, shipSizes[selectedShip], isPlacementVertical)
+
+        if(checkIfAllNeighborsExist(currentNeighbors)){
+            console.log(currentNeighbors)
+        }
+
+        
     }
 
 })
