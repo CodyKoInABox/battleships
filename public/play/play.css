@@ -30,9 +30,10 @@ body{
     grid-template-rows: 3vw 3vw 3vw 3vw 3vw 3vw 3vw 3vw 3vw 3vw;
 }
 .mapTile{
-    background-color: aqua;
+    background: #00ffff;
     width: 3vw;
     height: 3vw;
+    background-size: 100%;
 }
 .mapTile:hover{
     filter: brightness(85%);

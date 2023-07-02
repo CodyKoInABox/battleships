@@ -4,6 +4,8 @@ let isPlacementVertical = true
 
 let selectedShip = 'none'
 
+let globalCurrentNeighbors = [];
+
 let shipSizes = {
     'carrier': 5,
     'battleship': 4,
@@ -32,6 +34,7 @@ document.getElementById('leftGameBoard').addEventListener("mouseover", e => {
 
         if(checkIfAllNeighborsExist(currentNeighbors)){
             console.log(currentNeighbors)
+            globalCurrentNeighbors = currentNeighbors
         }
 
         
@@ -126,6 +129,30 @@ function checkIfAllNeighborsExist(neighbors){
     }
 
     return true
+}
+
+// this will dynamically display the ships on the left game board
+function displayBoatOnGrid(shipAssetName, startPosition, neighbors){
+
+
+    let originTile = document.getElementById(startPosition)
+
+    originTile.style.backgroundImage = `url('../assets/${shipAssetName}/0.png')`
+
+    console.log(neighbors.length)
+
+    for(let i = 0; i < neighbors.length - 1; i++){
+        
+        
+        let currentTile = document.getElementById(neighbors[i])
+
+        currentTile.style.backgroundImage = `url('../assets/${shipAssetName}/${i+1}.png')`
+
+
+    }
+
+
+
 }
 
 
