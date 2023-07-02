@@ -35,6 +35,8 @@ document.getElementById('leftGameBoard').addEventListener("mouseover", e => {
         if(checkIfAllNeighborsExist(currentNeighbors)){
             console.log(currentNeighbors)
             globalCurrentNeighbors = currentNeighbors
+
+            displayBoatOnGrid(selectedShip, e.target.id, globalCurrentNeighbors)
         }
 
         
@@ -150,9 +152,24 @@ function displayBoatOnGrid(shipAssetName, startPosition, neighbors){
 
 
     }
+}
 
 
+function clearGrid(tilesNotToClean){
 
+    for(let i=0; i<=9; i++){
+        for(let j=0; j<=9; j++){
+            
+
+            let currentTile = document.getElementById(i.toString() + j.toString())
+
+
+            if(!tilesNotToClean.includes(currentTile.id)){
+                currentTile.style.backgroundImage = 'none'
+            }
+        }
+    }
+    
 }
 
 
