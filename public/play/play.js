@@ -6,6 +6,9 @@ let selectedShip = 'none'
 
 let globalCurrentNeighbors = [];
 
+let placedTiles = [];
+
+
 let shipSizes = {
     'carrier': 5,
     'battleship': 4,
@@ -36,6 +39,8 @@ document.getElementById('leftGameBoard').addEventListener("mouseover", e => {
             console.log(currentNeighbors)
             globalCurrentNeighbors = currentNeighbors
 
+
+            clearBoard(placedTiles)
             displayBoatOnGrid(selectedShip, e.target.id, globalCurrentNeighbors)
         }
 
@@ -143,7 +148,7 @@ function displayBoatOnGrid(shipAssetName, startPosition, neighbors){
 
     console.log(neighbors.length)
 
-    for(let i = 0; i < neighbors.length - 1; i++){
+    for(let i = 0; i < neighbors.length; i++){
         
         
         let currentTile = document.getElementById(neighbors[i])
